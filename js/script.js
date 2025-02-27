@@ -4,6 +4,7 @@ for (let i = 0; i < ringButtons.length; i++) {
   const ringBtn = ringButtons[i];
   ringBtn.addEventListener("click", function (event) {
     const color = event.target.id.replace("-color", "");
+    console.log(color);
 
     for (let j = 0; j < ringButtons.length; j++) {
       ringButtons[j].classList.remove("border-purple-600");
@@ -16,7 +17,7 @@ for (let i = 0; i < ringButtons.length; i++) {
     const productImage = document.getElementById("product-image");
     // productImage.src = "../images/gray.png";
     // productImage.src = `../images/${color}.png`;
-    productImage.src = productImageBase + color + ".png";
+    productImage.src =`${ productImageBase}${color}.png`;
   });
 }
 
